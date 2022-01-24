@@ -2,36 +2,40 @@
 
 <script>
 
-  // // defining of the function
-  // function doIt() {
-  //   console.log('do it');
-  // }
+
+    function myMap(transformFn, arr) {
+
+      // const newArr = [];
+
+      // for (let x=0; x<arr.length; x++) {
+      //   newArr.push(transformFn(arr[x]));
+      // }
+
+      // for (let x of arr) {
+      //   newArr.push(transformFn(a));
+      // }
+
+      // do the map via side-effect
+      // newArr.forEach(num => newArr.push(transformFn(num)));
+
+      // return newArr;
+
+      // similar to the array.map function
+      return arr.reduce( (acc, cur) => {
+
+        console.log('acc: ', acc, 'cur: ', cur);
+
+        acc.push(transformFn(cur));
+        return acc;
+
+      }, [] /* initial value */)
+
+    }
+
+    const nums = [1,2,3,4,5];
+
+    console.log(myMap(x => x * 2, nums));
 
 
-  // // invocation of the function
-  // doIt();
-
-  // doSomethingElse(function doIt2() {
-  //   console.log('test');
-  // });
-
-  // const p = new Promise((resolve, reject) => {
-  //   // do some kind of async operation
-  //   setTimeout(() => {
-  //     resolve("test");
-  //   }, 2000);
-  // });
-
-  // function doIt(a,b,...c) {
-  //   console.log(a,b,c);
-  // }
-
-  // doIt(1,2,3,4,5);
-
-  function doIt(a=1,b=2) {
-    console.log(a,b);
-  }
-
-  doIt();
 
 </script>
