@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<script>
+
+  const nums = [1,2,3,4,5];
+
+  // array destructuring
+  const [ first, second,,test ] = nums;
+
+  console.log(test);
+
+  // list of cars (map, filter, forEach, for-of, push)
+  const cars = [
+    { id: 1, make: 'Ford', model: 'Fusion' },
+    { id: 2, make: 'Tesla', model: 'S' },
+  ]
+
+  // tuple of car info - array destructuring
+  // const carInfo = [ { title: 'Bob Smith'}, {stateRegistered: 'CA'}, cars[0] ];
+  const [ title, stateRegistration, carDetails ] = [
+    { title: 'Bob Smith'}, {stateRegistered: 'CA'}, cars[0] ];
+
+
+  const [ someData, setSomeData ] = useState('some data');
+
+
+</script>

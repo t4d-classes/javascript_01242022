@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<script>
+
+  const lastName = 'Smith';
+
+  const propName = "age";
+
+  const person = {
+    firstName: 'Bob',
+    // lastName: lastName,
+    // shorthand property
+    lastName,
+    // getFullName: function() {
+    //   return this.firstName + ' ' + this.lastName;
+    // },
+    // shorthand function property
+    getFullName() {
+      return this.firstName + ' ' + this.lastName;
+    },
+    // computed property
+    [ propName ]: 23,
+    _jobTitle: 'Programmer',
+    // short-hand syntax for getter/setter
+    get jobTitle() {
+      return this._jobTitle;
+    },
+    set jobTitle(value) {
+      this._jobTitle = value;
+    },
+  };
+
+  console.log(person.jobTitle);
+  person.jobTitle = "Manager";
+
+
+</script>

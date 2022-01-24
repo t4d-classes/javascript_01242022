@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<script>
+
+  const firstName = "test";
+
+  const person = {
+    firstName: 'Bob',
+    lastName: 'Smith',
+    address: {
+      street: '123 Oak Lane',
+      city: 'Mountain View',
+      state: 'CA',
+    },
+  };
+
+  const { firstName: fn, lastName } = person;
+
+  console.log(fn);
+  console.log(lastName);
+
+  const { address: { street, city, state } } = person;
+
+  console.log(street, city, state);
+
+
+
+</script>

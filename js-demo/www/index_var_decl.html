@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<script>
+
+  // never use 'var'
+  // var t = 2;
+
+  let t = 2;
+  t = 4;
+
+  const x = 3;
+  // x = 5;
+
+
+  
+  // function declaration
+  function doIt() {
+    console.log('do it');
+  }
+
+  // invoke it
+  doIt();
+
+  // function expression
+  const doIt2 = function() {
+    console.log('do it 2');
+  };
+
+  // invoke it
+  doIt2();
+
+
+  // arrow function
+  const doIt3 = () => {
+    console.log('do it 3');
+  };
+  
+  // invoke it
+  doIt3();
+
+  // generator function
+  function* doIt4() {
+    console.log('a');
+    yield 1;
+    console.log('b');
+    yield 2;
+    console.log('c');
+    yield 3;
+  }
+
+  for (let y of doIt4()) {
+    console.log("in the loop");
+    console.log(y);
+  }
+
+
+
+</script>

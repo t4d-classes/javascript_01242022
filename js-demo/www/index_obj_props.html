@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<script>
+
+  // object literal
+  const person = {
+    // key: value
+    // key is always a string
+    firstName: 'Bob',
+    lastName: 'Smith',
+    "age": 3,
+    "some wild and crazy prop name": "fun!",
+  };
+
+  console.log(person.firstName);
+
+  console.log(person['firstName']);
+
+  const propName = 'firstName';
+  console.log(person[propName]);
+
+  console.log(person.age);
+  console.log(person["some wild and crazy prop name"]);
+
+  person.favHobby = "skiing";
+
+  console.log(person);
+
+  delete person.age;
+
+  console.log(person);
+
+
+</script>

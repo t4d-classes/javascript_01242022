@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<script>
+
+  const nums = [1,2,3,4,5];
+
+  // more imperative solution
+  // for (let x=0; x<nums.length; x++) {
+  //   console.log(nums[x]);
+  // }
+
+  // more declarative solution
+  // for (let num of nums) {
+  //   console.log(num);
+  // }
+
+  // more declarative solution using the Array api
+  // forEach to iterate over an array and cause a side-effect
+  console.log(nums.forEach(num => console.log(num)));
+
+  // map is to iterate over an array, transform each item, and produce
+  // a new array
+  const doubleNums = nums.map(num => num * 2);
+  console.log(nums);
+  console.log(doubleNums);
+
+  function evenNum(num) {
+    return num % 2 === 0;
+  }
+
+  const evenNums = nums.filter(num => num % 2 === 0);
+  // const evenNums = nums.filter(num => { return num % 2 === 0; });
+  //const evenNums = nums.filter(function(num) { return num % 2 === 0; });
+  // const evenNums = nums.filter(evenNum);
+  // console.log(nums);
+  // console.log(evenNums);
+
+  const myFilter = (filterFn, arr) => {
+
+    const newArr = [];
+
+    for (let x=0; x<arr.length; x++) {
+      if (filterFn(arr[x])) {
+        newArr.push(arr[x]);
+      }
+    }
+
+    return newArr;
+
+  };
+
+
+
+</script>
