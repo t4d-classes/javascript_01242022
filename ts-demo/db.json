@@ -1,8 +1,20 @@
 {
   "colors": [
-    { "id": 1, "name": "red", "hexcode": "#ff0000" },
-    { "id": 2, "name": "green", "hexcode": "#00ff00" },
-    { "id": 3, "name": "blue", "hexcode": "#0000ff" }
+    {
+      "id": 1,
+      "name": "red",
+      "hexcode": "#ff0000"
+    },
+    {
+      "id": 2,
+      "name": "green",
+      "hexcode": "#00ff00"
+    },
+    {
+      "id": 3,
+      "name": "blue",
+      "hexcode": "#0000ff"
+    }
   ],
   "cars": [
     {
@@ -20,6 +32,62 @@
       "year": 2018,
       "color": "red",
       "price": 100000
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 3
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 4
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 5
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 6
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 7
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 8
+    },
+    {
+      "make": "Ford",
+      "model": "T",
+      "year": 1928,
+      "color": "black",
+      "price": 800,
+      "id": 9
     }
   ]
 }

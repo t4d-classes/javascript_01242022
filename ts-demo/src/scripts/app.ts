@@ -1,40 +1,29 @@
 
 // const delay = () => Math.floor(Math.random() * 1000) + 500;
 
-type Car = {
-  id: number;
-  make: string;
-  model: string;
-  year: number;
-  color: string;
-  price: number;
-};
-
-function myFetch<T>(url: string) {
-
-  return new Promise<T>( resolve => {
-
-    const xhr = new XMLHttpRequest();
-
-    xhr.addEventListener('readystatechange', () => {
-    
-      if (xhr.status === 200 && xhr.readyState === 4) {
-        resolve(JSON.parse(xhr.responseText));
-      }
-    
-    });
-    
-    xhr.open('GET', url);
-    xhr.send();
-
-  });
-
-}
+fetch('https://api.spacex.land/graphql/', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    operationName: 'Query',
+    query: `query Query($limit: Int) { launchesPast(limit: $limit) {
+      mission_name
+      launch_date_local
+    } }`,
+    variables: { limit: 20 },    
+  })
+})
+  .then(res => res.json())
+  .then(({ data }) => console.log(data));
 
 
-// Implement the `myFetch` function as shown below
-// use the XHR example to execute the actual AJAX
+// Lab Exercise
 
-myFetch<Car[]>('http://localhost:5050/cars').then(cars => console.log(cars));
+// Using the example code above, write a function named `getLaunches` that meets the following requirements
+
+// 1. Make the function an async function
+// 2. The limit of total launches to query should be a function parameter
+// 3. Add an optional function parameter there the returned list can be filtered by mission name (the filter should be starts with filter)
+// 4. Display in the console the results of calling the function to request 30 launch records that match the filter starts with 'Starlink'
 
 export { }
