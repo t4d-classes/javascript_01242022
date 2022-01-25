@@ -1,47 +1,22 @@
 
+// const delay = () => Math.floor(Math.random() * 1000) + 500;
 
-// setTimeout(() => {
-//   console.log("a");
-// }, 0);
+const xhr = new XMLHttpRequest();
 
-// console.log("b");
+xhr.addEventListener('readystatechange', () => {
 
-const delay = () => Math.floor(Math.random() * 1000) + 500;
+  if (xhr.status === 200 && xhr.readyState === 4) {
+    console.log(JSON.parse(xhr.responseText));
+  }
 
-setTimeout(() => {
-    console.log("a");
-    setTimeout(() => {
-        console.log("b");
-        setTimeout(() => {
-            console.log("c");
-        }, delay());
-    }, delay());
-}, delay());
+});
 
+xhr.open('GET', 'http://localhost:5050/cars');
+xhr.send();
 
-function allDone() {
-  console.log('all done');
-}
+// Implement the `myFetch` function as shown below
+// use the XHR example to execute the actual AJAX
 
-setTimeout(() => {
-  console.log('a');
-}, delay());
-
-setTimeout(() => {
-  console.log('b');
-}, delay());
-
-setTimeout(() => {
-  console.log('c');
-}, delay());
-
-// Lab Exercise
-
-// Run the `allDone` function after all three `setTimeout` callback functions have been called.
-// Rules:
-//  - You cannot use Promises or Async/Await
-//  - You cannot hard code any "delay" values
-//  - All three calls to setTimeout must occur in the same task
-
+myFetch('http://localhost:5050/cars').then(cars => console.log(cars));
 
 export { }
