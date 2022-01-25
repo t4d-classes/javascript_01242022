@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<script>
+
+  class Person {
+
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    getFullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+
+  }
+
+  class Student extends Person {
+
+    constructor(studentId, firstName, lastName) {
+      super(firstName, lastName);
+      this.studentId = studentId;
+    }
+
+    getRecordInfo() {
+      return `${this.studentId} ${this.lastName}, ${this.firstName}`;
+    }
+
+  }
+
+  const student1 = new Student(1, "Kelly", "Thompkins");
+
+  console.log(student1);
+
+  console.log(student1.someProp);
+
+
+
+
+</script>

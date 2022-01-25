@@ -1,41 +1,18 @@
 <!DOCTYPE html>
 
-<script>
+<html>
+
+  <head>
+    <title>JS Demo</title>
+    <script defer type="module" src="js/utils.js"></script>
+    <script defer type="module" src="js/app.js"></script>
+    <!-- <script defer>console.log('in the head2');</script> -->
+  </head>
+
+  <body>
+    <h1>JS Demo</h1>
+    <!-- <script>console.log('in the body');</script> -->
+  </body>
 
 
-    function myMap(transformFn, arr) {
-
-      // const newArr = [];
-
-      // for (let x=0; x<arr.length; x++) {
-      //   newArr.push(transformFn(arr[x]));
-      // }
-
-      // for (let x of arr) {
-      //   newArr.push(transformFn(a));
-      // }
-
-      // do the map via side-effect
-      // newArr.forEach(num => newArr.push(transformFn(num)));
-
-      // return newArr;
-
-      // similar to the array.map function
-      return arr.reduce( (acc, cur) => {
-
-        console.log('acc: ', acc, 'cur: ', cur);
-
-        acc.push(transformFn(cur));
-        return acc;
-
-      }, [] /* initial value */)
-
-    }
-
-    const nums = [1,2,3,4,5];
-
-    console.log(myMap(x => x * 2, nums));
-
-
-
-</script>
+</html>

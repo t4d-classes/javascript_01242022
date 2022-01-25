@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<script>
+
+  const parent = {
+    name: 'parent',
+    amt: 2000,
+  };
+
+  const child = Object.create(parent);
+
+  child.name = "child";
+
+  console.log(child.amt); // 2000
+
+  parent.amt = 3000;
+
+  console.log(child.amt); // 3000
+
+  child.amt = 500;
+
+  console.log(child.amt);
+
+  console.log(child);
+
+  delete child.amt;
+
+  console.log(child);
+
+  console.log(child.amt);
+
+
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<script>
+
+  // const person = {
+  //   firstName: 'Sam',
+  //   lastName: 'Sulley',
+  //   getFullName() {
+  //     console.log(this.firstName + " " + this.lastName);
+  //   },
+  // };
+
+  // person.getFullName = person.getFullName.bind(person);
+
+  // setTimeout(person.getFullName, 2000)
+
+  class Person {
+
+    // creates instance properties without a constructor - ES2022
+    #firstName = 'Bob'; // private member  - ES2022
+    lastName = 'Smith'
+
+    // constructor(firstName, lastName) {
+    //   this.firstName = firstName;
+    //   this.lastName = lastName;
+
+    //   // this.printFullName = this.printFullName.bind(this);
+    // }
+
+    get firstName() {
+      return this.#firstName;
+    }
+
+    set firstName(value) {
+      this.#firstName = value;
+    }
+
+
+    // class arrow function and it does the bind for you - ES2022
+    printFullName = () => {
+      console.log(this.firstName + ' ' + this.lastName);
+    }
+
+  }
+
+  const p = new Person('Timmy', 'Tolins');
+
+  setTimeout(p.printFullName, 2000);
+
+  console.log(p.#firstName);
+
+
+</script>

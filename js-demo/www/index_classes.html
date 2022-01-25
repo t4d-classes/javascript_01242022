@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<script>
+
+  class Person {
+
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    getFullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+
+  }
+
+  const person1 = new Person('Bob', 'Smith');
+  console.log(person1.getFullName());
+
+  console.log(person1);
+
+  const person2 = new Person('Jane', 'Thomas');
+  console.log(person2.getFullName());
+
+  console.log(person2);
+
+  console.log(person1.getFullName === person2.getFullName);
+
+
+  function Person2(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  Person2.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
+  };
+
+  const person5 = new Person2('Sarah', 'Gallie');
+  console.log(person5.getFullName());
+
+  console.log(person5);
+
+  // const parent = {
+  //   getFullName() {
+  //     return this.firstName + ' ' + this.lastName;
+  //   }
+  // };
+
+  // const person3 = Object.create(parent);
+  // person3.firstName = "Sally";
+  // person3.lastName = "Smith";
+  // console.log(person3);
+  // console.log(person3.getFullName());  
+
+  // const person4 = Object.create(parent);
+  // person4.firstName = "Srilakshmi";
+  // person4.lastName = "Movva";
+  // console.log(person4);
+  // console.log(person4.getFullName());  
+
+  // console.log(person3.getFullName === person4.getFullName);
+
+
+
+</script>

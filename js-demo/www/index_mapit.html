@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<script>
+
+  // polyfill...
+  if (!Array.prototype.mapit) {
+
+    Array.prototype.mapit = function(transformFn) {
+
+      const newArr = [];
+
+      for (let x=0; x<this.length; x++) {
+        newArr.push(transformFn(this[x]));
+      }
+
+      return newArr;
+    };
+  }
+
+
+  // party like it's 1996
+
+  function doubleNum(x) { return x * 2; }
+
+  var nums = new Array(1,2,3,4,5);
+
+  console.log(nums.mapit(doubleNum));
+
+
+
+
+</script>

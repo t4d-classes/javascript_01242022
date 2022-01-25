@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<script>
+
+  'use strict';
+
+  // keyword-style use call-site "this"
+  // the value of "this" is determined by the call-site, how the function is called
+  function doIt() {
+    console.log(this);
+
+    // const that = this;
+
+    // function inner() {
+    //   console.log(that);
+    // }
+
+    // arrow functions use lexical this
+    const inner = () => {
+      console.log(this);
+    };
+
+    inner();
+  }
+
+  // doIt();
+
+  // window.doIt();
+
+  const o = {
+    id: 2,
+    doIt,
+  };
+
+  o.doIt();
+
+  // console.log(o.doIt === window.doIt);
+
+
+
+</script>

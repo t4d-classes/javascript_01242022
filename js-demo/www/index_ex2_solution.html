@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<script>
+
+  const persons = [
+    { id: 1, firstName: 'Jane', lastName: 'Thomas' },
+    { id: 2, firstName: 'Sally', lastName: 'Wilkins' }
+  ];
+
+  const newPersons = [
+    ...persons,
+    {
+      firstName: 'Bob',
+      lastName: 'Smith',
+      id: Math.max(...persons.map(p => p.id), 0) + 1,
+    },
+  ];
+
+  console.log(newPersons);
+
+
+
+</script>
