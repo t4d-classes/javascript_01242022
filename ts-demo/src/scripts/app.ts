@@ -23,7 +23,7 @@ fetch('https://api.spacex.land/graphql/', {
 
 // 1. Make the function an async function
 // 2. The limit of total launches to query should be a function parameter
-// 3. Add an optional function parameter there the returned list can be filtered by mission name (the filter should be starts with filter)
-// 4. Display in the console the results of calling the function to request 30 launch records that match the filter starts with 'Starlink'
+// 3. Add an optional function parameter where the returned list can be filtered by mission name (the filter should be starts with filter)
+// 4. Display in the console the results of calling the function to request 30 launch records that match the starts with filter with the value 'Starlink'
 
 export { }
